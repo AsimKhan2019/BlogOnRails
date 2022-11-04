@@ -196,3 +196,9 @@ h5 {
   margin-bottom: 0.5rem;
   padding-left: 0.1rem;
 }
+
+.sigin-out-container {
+  margin: 1rem 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
