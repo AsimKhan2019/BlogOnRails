@@ -14,9 +14,7 @@
     <%  if can? :create, Post %>
       <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%> 
     <% end %>
-  </div>
-
-  <%# <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%> 
+  </div> 
   
   <h4>Recent posts </h4>
     <% if @user.posts_counter > 0 %>
