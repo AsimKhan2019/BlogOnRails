@@ -1,9 +1,9 @@
 
 <div class='container'>
   <h1 class= 'page_title'>List of Users</h1>
-  <button>
+  <div class ="sigin-out-container">
     <%= link_to 'Sign Out', destroy_user_session_path, class: 'post_btn', data: { turbo_method: :delete } %>
-  </button>
+  </div>
   <div>
     <ul>
       <% @users.each do |user| %>
