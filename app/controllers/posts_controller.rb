@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = Post.includes(comments: [:author]).where(posts: { author_id: @user.id })
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.author.decrement!(:posts_counter)
-    Post.delete(params[:id])
+    @post.destroy
   end
 
   private

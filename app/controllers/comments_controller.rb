@@ -17,8 +17,9 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find(params[:id])
-    comment.post.decrement!(:comments_counter)
-    comment.delete
+    comment.destroy
+    comment.save
+    redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", notice: 'Comment deleted'
   end
 
   private

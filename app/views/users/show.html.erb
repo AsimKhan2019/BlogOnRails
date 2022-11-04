@@ -30,7 +30,7 @@
                 <p> <%= post[:text] %> </p>
 
                 <%  if can? :destroy, Post %>
-                  <%= button_to 'delete post', "/users/#{@user.id}/posts/#{post.id}", method: :delete%>
+                  <%= button_to 'delete post', "/users/#{@user.id}/posts/#{post.id}", class: 'post_btn', method: :delete%>
                 <% end %>
 
                 <p class = 'post_counter' >Comments:<%= post[:comments_counter] %> Likes: <%= post[:likes_counter] %> </p>
