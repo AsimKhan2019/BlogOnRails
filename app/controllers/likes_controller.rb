@@ -16,5 +16,4 @@ class LikesController < ApplicationController
     like.destroy
     redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", notice: 'Like removed'
   end
-
 end
