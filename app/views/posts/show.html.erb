@@ -13,7 +13,7 @@
     
     <% if can? :create, Like %>
     <%= form_with url: "/posts/#{@post.id}/likes", scope: :like do |form| %>
-      <%= form.submit "Like this post" %>
+      <%= form.submit "Like this post", class: 'post_btn' %>
     <% end %>
     <% end %>
        <% if can? :create, Comment %>
@@ -31,7 +31,7 @@
           <h5> <%= comment.author.name %></h5>
           <p><%= comment[:text] %> </p>
           <% if can? :destroy, Comment %>
-          <%= button_to 'delete comment', "/posts/#{@post.id}/comments/#{comment.id}", method: :delete %>
+          <%= button_to 'delete comment', "/posts/#{@post.id}/comments/#{comment.id}", method: :delete, class: 'post_btn' %>
           <% end %>
         </li>
       <% end %>
