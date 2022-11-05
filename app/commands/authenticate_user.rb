@@ -18,7 +18,7 @@ class AuthenticateUser
     user = User.find_by_email(email)
     return user if user&.valid_password?(password)
 
-    errors.add :user_authentication, 'invalid credentials'
+    errors.add :user_authentication, 'invalid credentials, please provide correct creadentials'
     nil
   end
 end
