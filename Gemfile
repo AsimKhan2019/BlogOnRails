@@ -66,6 +66,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -88,3 +89,6 @@ end
 
 gem 'bullet'
 gem 'cancancan'
+gem 'jwt'
+gem 'rack-cors'
+gem 'simple_command'
