@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, sign_out_via: [:get, :post]
-  # get 'likes/create'
-  # get 'comments/create'
+
   resources :users do 
     resources :posts 
   end 
