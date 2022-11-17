@@ -13,7 +13,7 @@ Ruby
 Postgresql Node.js Yarn Rails
 
 Getting Started
-Clone this repository $ git clone git@github.com:NickEmma/blog_app.git $ cd blog_app
+Clone this repository $ git clone git@github.com:AsimKhan2019/BlogOnRails.git $ cd blog_app
 
 Commands to run
 
